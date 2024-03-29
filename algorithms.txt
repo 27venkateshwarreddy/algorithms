@@ -1,0 +1,242 @@
+Write an algorithm for driving from your place to your favourite destination.
+
+Start: Begin at your current location.
+Input Destination: Enter the address or coordinates of your favorite destination.
+Plan Route: Use a mapping service or GPS navigation system to determine the best route to your destination. Consider factors like traffic, road closures, and construction.
+Follow Directions: Follow the directions provided by the mapping service, observing traffic signs and signals along the way.
+Adapt to Changes: Be prepared to adapt to changes in the route due to traffic conditions or road closures. The mapping service may provide alternative routes if necessary.
+Drive Safely: Observe speed limits, yield to pedestrians, and maintain a safe distance from other vehicles.
+Arrive at Destination: Continue following the directions until you reach your favorite destination.
+End: Once you arrive at your destination, your journey is complete.
+____________________________________________________________________________________________________________________________________________________________
+Write an algorithm for Registration and login into your websites.
+Registration:
+
+User Input: Collect user information such as username, email, and password.
+Validate Input: Check if the username and email are unique and meet the required format (e.g., valid email format). Ensure that the password meets security requirements (e.g., minimum length, special characters).
+Store Data: Save the user information securely in a database, encrypting sensitive information like passwords.
+Confirmation: Optionally, send a confirmation email to the user to verify their email address.
+Registration Complete: Inform the user that registration was successful and provide instructions on how to proceed to login.
+Login:
+
+User Input: Collect username/email and password from the user.
+Verify Credentials: Check if the entered username/email exists in the database. If found, retrieve the corresponding password.
+Authenticate: Compare the entered password with the stored password for the user. If they match, proceed to login.
+Session Management: Create a session for the user to maintain their login status throughout their visit to the website.
+Login Successful: Redirect the user to their dashboard or designated landing page upon successful login.
+Handle Invalid Credentials: If the username/email or password is incorrect, notify the user and provide options for password reset or registration.
+Logout: Provide an option for the user to log out, which destroys their session and logs them out of the website.
+
+__________________________________________________________________________________________________________________________________________________________
+write an algorithm to check if a number is negative or positive:
+
+1. *Input*: Obtain the number to be checked.
+2. *Check Sign*:
+   - If the number is greater than zero, it's positive.
+   - If the number is less than zero, it's negative.
+   - If the number is exactly zero, it's neither positive nor negative.
+3. *Output*: Return the result indicating whether the number is positive, negative, or zero.
+
+Pseudocode:
+
+
+function checkSign(number):
+    if number > 0:
+        return "Positive"
+    else if number < 0:
+        return "Negative"
+    else:
+        return "Zero"
+
+number = input("Enter a number: ")
+result = checkSign(number)
+print("The number is", result)
+
+
+The sign of the number and returns whether it's positive, negative, or zero.
+
+1. *Input*: Obtain the number to be checked.
+2. *Check for Special Cases*:
+   - If the number is less than 2, it's not prime.
+   - If the number is exactly 2, it's prime.
+3. *Check Divisibility*: 
+   - Iterate from 2 to the square root of the number.
+   - If the number is divisible by any integer in this range, it's not prime.
+4. *Output*: Return whether the number is prime or not.
+
+Pseudocode:
+
+
+function isPrime(number):
+    if number < 2:
+        return false
+    else if number == 2:
+        return true
+    else:
+        for i from 2 to floor(sqrt(number)):
+            if number % i == 0:
+                return false
+        return true
+
+number = input("Enter a number: ")
+if isPrime(number):
+    print(number, "is prime.")
+else:
+    print(number, "is not prime.")
+___________________________________________________________________________________________________________________________________________________________
+write algorithm to check if a number is negative or positive:
+
+1. Start
+2. Input the number to be checked (num)
+3. If num < 0, then
+       Print "The number is negative"
+4. Else if num > 0, then
+       Print "The number is positive"
+5. Else
+       Print "The number is zero"
+6. End
+___________________________________________________________________________________________________________________________________________________________
+
+write an algorithm to check if a number is an Armstrong number:
+
+ Declare Variable sum, temp, num
+ Initialize Variable sum=0 and temp=num
+ Repeat Until num>=0
+             sum=sum + cube of last digit i.e [(num%10)*(num%10)*(num%10)]
+             num=num/10
+ IF sum==temp
+            Print "Armstrong Number"
+        ELSE 
+            Print "Not Armstrong Number"
+ Stop
+___________________________________________________________________________________________________________________________________________________________
+Write an algorithm to check if a year is leap year or not.
+
+1. Start
+2. Input the year to be checked (year)
+3. If year is evenly divisible by 4, then
+    If year is evenly divisible by 100, then
+        If year is evenly divisible by 400, then
+            Print "Leap year"
+         Else
+            Print "Not a leap year"
+    Else
+        Print "Leap year"
+4. Else
+    Print "Not a leap year"
+5. End
+
+This algorithm follows the rules to determine leap years:
+
+If a year is divisible by 4, it is a leap year.
+However, if that year is also divisible by 100, it is not a leap year, unless:
+It is divisible by 400, in which case it is still a leap year.
+__________________________________________________________________________________________________________________________________________________________
+Write an algorithm to check if a year is leap year or not in english
+
+1. Start
+2. Input the year to be checked (year)
+3. If (year is divisible by 4) and ((year is not divisible by 100) or (year is divisible by 400)), then
+      Print "Leap year"
+4. Else,
+      Print "Not a leap year"
+5. End
+
+This algorithm follows the rules for determining leap years:
+
+If a year is divisible by 4, it is a leap year.
+However, if the year is divisible by 100, it is not a leap year, unless it is also divisible by 400.
+___________________________________________________________________________________________________________________________________________________________
+Write an algorithm to find fibbonacci of a given number pusodocode implimentation output
+
+1. Start
+2. Input the number for which Fibonacci is to be found (n)
+3. Set variables a and b to 0 and 1 respectively (initialize first two Fibonacci numbers)
+4. If n is less than or equal to 1, then
+      Return n
+5. Otherwise, do the following n-1 times:
+      Set a to the value of b
+      Set b to the sum of a and b
+6. Return b as the Fibonacci number of n
+7. End
+Pseudocode Implementation:
+
+function Fibonacci(n):
+    if n <= 1:
+        return n
+    else:
+        a = 0
+        b = 1
+        for i from 2 to n:
+            temp = b
+            b = a + b
+            a = temp
+        return b
+
+Output:
+
+Fibonacci(0) = 0
+Fibonacci(1) = 1
+Fibonacci(2) = 1
+Fibonacci(3) = 2
+Fibonacci(4) = 3
+Fibonacci(5) = 5
+Fibonacci(6) = 8
+__________________________________________________________________________________________________________________________________________________________
+Write an algorithm to find even numbers existing in a an array between the starting and ending position you give.
+
+ Start
+ For i from start_index to end_index, do
+         If arr[i] modulo 2 is equal to 0 (i.e., arr[i] is even), then
+         Append arr[i] to the list even_numbers
+ Return even_numbers
+ End
+
+Pseudocode Implementation:
+
+function findEvenNumbers(arr, start_index, end_index):
+    even_numbers = []
+    for i from start_index to end_index:
+        if arr[i] % 2 == 0:
+            even_numbers.append(arr[i])
+    return even_numbers
+___________________________________________________________________________________________________________________________________________________________
+write an algorithm to find the sum of sub-arrays dynamically such that the sum is greater than 10 and then copy those values into another array:
+
+
+1. Start
+2. Input the original array (arr)
+3. Initialize an empty list to store the sub-arrays with sum greater than 10 (sub_arrays)
+4. Initialize an empty list to store the copied values (copied_values)
+5. For i from 0 to length of arr, do
+      Initialize a variable sum to 0
+      For j from i to length of arr, do
+           Add arr[j] to sum
+            If sum is greater than 10, then
+                      Append the sub-array arr[i:j+1] to sub_arrays
+                    For each element in arr[i:j+1], do
+                                  Append it to the list copied_values
+5. Return copied_values
+6. End
+
+
+Pseudocode Implementation:
+
+function findAndCopySubArrays(arr):
+    sub_arrays = []
+    copied_values = []
+    for i from 0 to length of arr:
+        sum = 0
+        for j from i to length of arr:
+            sum += arr[j]
+            if sum > 10:
+                sub_arrays.append(arr[i:j+1])
+                for k from i to j+1:
+                    copied_values.append(arr[k])
+    return copied_values
+_________________________________________________________________________________________________________________________________________________________
+
+
+
+
+
